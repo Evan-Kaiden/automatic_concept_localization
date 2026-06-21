@@ -8,7 +8,7 @@ This code takes an image and a set of concepts and locates each concept within t
 
 ## How it works
 
-It leverages [RISE](RISE.py) and image-text encoders (via [open_clip](https://github.com/mlfoundations/open_clip)) to:
+It leverages [RISE](https://github.com/eclique/RISE) and image-text encoders (via [open_clip](https://github.com/mlfoundations/open_clip)) to:
 
 1. Iteratively mask out random regions of the input image.
 2. Measure how the presence of each concept changes when a given region is masked out.
