@@ -21,7 +21,7 @@ It leverages [RISE](https://github.com/eclique/RISE) and image-text encoders (vi
 
 <img src="people_in_a_park.png" width="500">
 
-| | Green bench | Khaki trousers | White jacket | Shoes |
+| | A place to sit | Khaki trousers | White jacket | Shoes |
 |---|---|---|---|---|
 | Saliency map | <img src="sample_images/00_a_place_to_sit.png" width="180"> | <img src="sample_images/01_khaki_trousers.png" width="180"> | <img src="sample_images/02_white_jacket.png" width="180"> | <img src="sample_images/03_shoes.png" width="180"> |
 | Bounding box | <img src="sample_images/00_a_place_to_sit_boxes.png" width="180"> | <img src="sample_images/01_khaki_trousers_boxes.png" width="180"> | <img src="sample_images/02_white_jacket_boxes.png" width="180"> | <img src="sample_images/03_shoes_boxes.png" width="180"> |
@@ -30,7 +30,7 @@ It leverages [RISE](https://github.com/eclique/RISE) and image-text encoders (vi
 
 <img src="desk.png" width="500">
 
-| | Clock | Something natural | Writing tools | Something to drink tea from |
+| | Shos the time | Something natural | Writing tools | Something to drink tea from |
 |---|---|---|---|---|
 | Saliency map | <img src="sample_images/00_shows_the_time.png" width="180"> | <img src="sample_images/02_something_that_appears_in_nature.png" width="180"> | <img src="sample_images/03_writing_tools.png" width="180"> | <img src="sample_images/04_something_to_drink_tea_from.png" width="180"> |
 | Bounding box | <img src="sample_images/00_shows_the_time_boxes.png" width="180"> | <img src="sample_images/02_something_that_appears_in_nature_boxes.png" width="180"> | <img src="sample_images/03_writing_tools_boxes.png" width="180"> | <img src="sample_images/04_something_to_drink_tea_from_boxes.png" width="180"> |
