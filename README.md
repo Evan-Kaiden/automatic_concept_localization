@@ -1,20 +1,5 @@
 # Part-Based Concept AutoLabel
 
-Concepts exist in all images, but having a model *locate* those concepts is non-trivial.
-
-Label-free concept bottleneck models use image-text encoders to determine whether a concept is present in an image, in order to train interpretable classifiers. But *where* a concept exists in the image is an interesting question in its own right.
-
-This code takes an image and a set of concepts and locates each concept within the image.
-
-## How it works
-
-It leverages [RISE](https://github.com/eclique/RISE) and image-text encoders (via [open_clip](https://github.com/mlfoundations/open_clip)) to:
-
-1. Iteratively mask out random regions of the input image.
-2. Measure how the presence of each concept changes when a given region is masked out.
-3. Aggregate this over thousands of random masks to build a probability distribution over pixel locations — i.e. "this pixel has an X% chance of containing the target concept."
-4. Attribute the densest region of pixels as the concept's location in the image.
-
 ## Examples
 
 ### `people_in_a_park.png`
@@ -34,6 +19,22 @@ It leverages [RISE](https://github.com/eclique/RISE) and image-text encoders (vi
 |---|---|---|---|---|
 | Saliency map | <img src="sample_images/00_shows_the_time.png" width="180"> | <img src="sample_images/02_something_that_appears_in_nature.png" width="180"> | <img src="sample_images/03_writing_tools.png" width="180"> | <img src="sample_images/04_something_to_drink_tea_from.png" width="180"> |
 | Bounding box | <img src="sample_images/00_shows_the_time_boxes.png" width="180"> | <img src="sample_images/02_something_that_appears_in_nature_boxes.png" width="180"> | <img src="sample_images/03_writing_tools_boxes.png" width="180"> | <img src="sample_images/04_something_to_drink_tea_from_boxes.png" width="180"> |
+
+Concepts exist in all images, but having a model *locate* those concepts is non-trivial.
+
+Label-free concept bottleneck models use image-text encoders to determine whether a concept is present in an image, in order to train interpretable classifiers. But *where* a concept exists in the image is an interesting question in its own right.
+
+This code takes an image and a set of concepts and locates each concept within the image.
+
+## How it works
+
+It leverages [RISE](https://github.com/eclique/RISE) and image-text encoders (via [open_clip](https://github.com/mlfoundations/open_clip)) to:
+
+1. Iteratively mask out random regions of the input image.
+2. Measure how the presence of each concept changes when a given region is masked out.
+3. Aggregate this over thousands of random masks to build a probability distribution over pixel locations — i.e. "this pixel has an X% chance of containing the target concept."
+4. Attribute the densest region of pixels as the concept's location in the image.
+
 
 ## Running the code
 
